@@ -1,0 +1,30 @@
+body{
+ background-image: url("https://t3.ftcdn.net/jpg/02/19/36/66/240_F_219366690_CI9lWxT51IRmJ8Mtn8dmgAxhCdWCHC1J.jpg");
+}
+
+
+.sub{
+    /*font-family: 'Comfortaa', cursive;*/
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+
+
+.main{
+        font-family: 'Comfortaa', cursive;
+        text-decoration: underline;
+        text-align: center;
+}
+
+
+p{
+    /*font-family: 'Poiret One', cursive;*/
+    font-family: 'Forum', cursive;
+}
+
+#searchb{
+    background-color: #a1c4fc;
+    color:whitesmoke;
+}
+
+
