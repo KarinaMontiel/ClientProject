@@ -1,4 +1,4 @@
- /*global $*/
+/*global $*/
  
 //  $( document ).ready(function() {
 //     console.log( "ready!" );
@@ -31,7 +31,6 @@
     
     
  });
-// });
 
 
 $("#dropdownMenuButton").click(function() {
@@ -42,7 +41,11 @@ $("#dropdownMenuButton").click(function() {
 
 // JS for the Drama HMTL
 
-$( document ).ready(function() {
+$(document).ready(function() {
+   console.log( "ready!" );
+    
+    
+    
      $.ajax({
      
      
@@ -59,4 +62,5 @@ $( document ).ready(function() {
             console.log("Error");
             console.log(error);
         }
+    });
 });
