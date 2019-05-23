@@ -31,6 +31,36 @@
     
     
  });
+ 
+ 
+  $("#searchb").click(function() {
+     console.log("searchb");
+ 
+    let movie= $("#input1").val();
+
+    $.ajax({
+     
+     
+        url: `https://api.themoviedb.org/3/search/movie?api_key=a940e759d1db2087736ae02016ec33b2&query=${movie}`,
+        method: "GET",
+        success: function(response) {
+            console.log("success");
+            console.log(response.results[1].original_title);
+            $("#title2").append(response.results[1].original_title);
+            $("#over2").append(response.results[1].overview);
+            $("#release2").append(response.results[1].release_date);
+            
+            
+            
+        },
+        error: function(xhr,status,error) {
+            console.log("Error");
+            console.log(error);
+        }
+    }); 
+    
+    
+ });
 
 
 $("#dropdownMenuButton").click(function() {
@@ -49,11 +79,14 @@ $(document).ready(function() {
      $.ajax({
      
      
-        url: `https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=a940e759d1db2087736ae02016ec33b2`,
+        url: `https://api.themoviedb.org/3/discover/movie?with_genres=18&primary_release_year=2014&api_key=a940e759d1db2087736ae02016ec33b2`,
+
         method: "GET",
         success: function(response) {
             console.log("success");
-            console.log(response.results[0].original_title);
+            response.forEach(function(item){
+                $("#foo").append("<li> <li>");
+            });
            
             
             
@@ -64,3 +97,7 @@ $(document).ready(function() {
         }
     });
 });
+
+
+
+
