@@ -73,9 +73,7 @@ $("#dropdownMenuButton").click(function() {
 
 $(document).ready(function() {
    console.log( "ready!" );
-    
-    
-    
+   
      $.ajax({
      
      
@@ -85,7 +83,10 @@ $(document).ready(function() {
         success: function(response) {
             console.log("success");
             response.forEach(function(item){
-                $("#foo").append("<li> <li>");
+                $("#foo").append(`<li> ${item} <li>`);
+                
+            $("#foo").append("<li>" + response.results[0].title + "</li>");
+
             });
            
             
